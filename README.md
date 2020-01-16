@@ -1,4 +1,4 @@
-#ADOPT
+# ADOPT
 
 Although aviation accidents are rare, safety incidents occur more frequently and require a careful analysis to detect and mitigate risks in a timely manner. Analyzing safety incidents using operational data and producing event-based explanations is invaluable to airline companies as well as to governing organizations such as the Federal Aviation Administration (FAA) in the United States. However, this task is challenging because of the complexity involved in mining multi-dimensional heterogeneous time series data, the lack of time-step-wise annotation of events in a flight, and the lack of scalable tools to perform analysis over a large number of events. We propose a precursor mining algorithm: Automatic Discovery of Precursors in Time series data (ADOPT) that identifies events in the multidimensional time series that are correlated with the safety incident. Precursors are valuable to systems health and safety monitoring and in explaining and forecasting safety incidents. Current methods suffer from poor scalability to high dimensional time series data and are inefficient in capturing temporal behavior. We propose an approach by combining multiple-instance learning (MIL) and deep recurrent neural networks (DRNN) to take advantage of MIL's ability to learn using weakly supervised data and DRNN's ability to model temporal behavior. 
 
@@ -48,7 +48,7 @@ NASA Corporate Contributor License Agreement
 
 
 
-##Contact Info
+## Contact Info
 
 NASA Point of contact: Nikunj Oza <nikunj.c.oza@nasa.gov>, Data Science Group Lead.
 
@@ -57,7 +57,7 @@ For questions regarding [the research and development of the algorithm], please 
 For questions regarding the source code, please contact Daniel Weckler <daniel.i.weckler@nasa.gov>, Software Engineer.
 
 
-##Copyright and Notices
+## Copyright and Notices
 
 Notices:
 
