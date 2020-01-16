@@ -1,0 +1,294 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1671\cocoasubrtf600
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\fswiss\fcharset0 Helvetica-Oblique;\f2\fswiss\fcharset0 Helvetica-BoldOblique;
+\f3\fswiss\fcharset0 Helvetica-Bold;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww28600\viewh15240\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf0 Usage\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs24 \cf0 Place your properly formatted dataset in the \'93datasets\'94 directory. Run begin_DTMIL.py from the 
+\f1\i source
+\f0\i0  directory. To edit parameters, for each run, change the values in DTMIL_config.json.
+\fs28 \
+\
+\
+\
+DTMIL_config.json\
+
+\f1\i\fs24 Dataset specific parameters. Each dataset has one of these files describing it\
+\
+
+\f0\i0 \ul Config_ID:\
+\ulnone The ID for the dataset used in model_storage and model_output. This is used so we can have multiple config files to run different parameters/models in parallel 
+\f1\i \
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \ul \ulc0 Training\ulnone \
+\
+batch_size\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Number of samples to be propagated through the network\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+dr\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Dropout rate (between 0 and 1)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+epochs\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Number of training passes through the data
+\f0\i0 \
+\
+lam\
+
+\f1\i Regularization parameter (lambda)
+\f0\i0 \
+\
+lr\
+
+\f1\i Specified learning rate
+\f0\i0 \
+\
+nhd\
+
+\f1\i Number of hidden units in the fully connected layer
+\f0\i0 \
+\
+nhr\
+
+\f1\i Number of units in the recurrent layer
+\f0\i0 \
+\
+seed\
+
+\f1\i Random seed\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf0 \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\i0 \cf0 pre_trained_model (string filepath)\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\i \cf0 Location of a pre-trained model to load if train_flag is set to 0. Loads from the default file path (model_saves/[run_id]/[model_filename] if set to a blank string (\'93\'94) (
+\f2\b The \'93default file path\'94 is currently buggy, so if you want to load a new model, specify the file path here)
+\f1\b0 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\i0 \cf0 pre_trained_json (string filepath):
+\f1\i \
+Location of a json file to load a pre-trained model from if the model is split into a model and json. Set to a blank string (\'93\'94) to ignore this parameter 
+\f2\b (currently only works with a full file path, will be fixed in the future)
+\f1\b0  \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 train_flag\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Set to 0 to use a specified pre-trained model, 1 to create a new model \
+\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \ul Importing\
+\
+\ulnone nominal_filename:\ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 \ulnone Filename for the nominal data\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 adverse_filename:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Filename for the adverse data\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \ul \
+\ulnone validation percent:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Percent of samples to be used for the validation set (after the test set has been held out)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+holdout_percent\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Percent of samples to be held out for the test set\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \ul \
+\ulnone state_cache\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 # 0 to load states from a saved cache, 1 to load from the original CSV files. If a cache does not exist, the program will load from the CSV files, then create one. The cache is updated every time the program loads from CSV files.
+\f0\i0 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \ulnone \
+\pard\pardeftab720\sl280\partightenfactor0
+
+\fs24 \cf0 time_splice:\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\i \cf0 The percentage of the time window to use. Set to 1 to use the whole window (recommend). Example: 0.6 will only use the first 60 % of the time steps in the window\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f0\i0 \cf0 \ul \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \
+Preprocessing\
+\ulnone \
+all_parameter_names (list of strings):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 List of all parameter names for the dataset\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 set_sample_length (int):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Number defining the length of each time series. Time series above this number will be truncated, ones below this number will be dropped. If this value is set to null, the length will be inferred from the dataset
+\f0\i0 \
+\
+redundant_parameters (int or string list): \
+
+\f1\i List of parameters to hold out when training. This lets you manually define parameters to be held out (rather than the automatic process above)\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 drop_parameters (int or string list):\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Parameters to be dropped and not included in the visualization (the redundant and held out parameters are still included in the visualization)
+\f0\i0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \ul \
+\
+Model_IO:\
+\ulnone model_filename:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Filename for the keras model\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 model_container_filename\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Filename for the model container, but this doesn\'92t include the keras model itself (trained or untrained)since that can\'92t be pickled\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 data_container_filename:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Filename for the data container where the dataset is stored
+\f0\i0 \ul \
+\
+Visualization\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+\cf0 \ulnone precursor_threshold\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 The precursor score threshold from which we define an adverse event (default 0.5)\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+guideline_type:\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This sets the guidelines (dashed lines) in the visualization process. 
+\f0\i0 \
+\
+\pard\pardeftab720\sl280\partightenfactor0
+\cf0 binary_parameters (int list)\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f1\i \cf0 Tells the visualization code which parameters are binary 
+\f0\i0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\fs28 \cf0 \
+DTMIL_config_dir.json
+\fs24 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This file contains the file directories needed to help the program run. These do not need to be changed unless the user wishes to customize the file structure of the program. The \'93datasets\'94 directory assumes the \'93source\'94 directory is used as a base. All the other directories assume that the datasets directory + the selected dataset (defined by the user) is used as a base.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 cache_file\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Save location for the parameters that are cached from a previous run of the program. This is used so large datasets don\'92t need to be imported from .csv files every time the program is run\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 datasets_directory\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 The directory where all the datasets are located\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 \
+parameters_directory\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This is where the file lists and parameters are stored\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 model_archive_directory\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This is where backups from each run of the model are stored\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 model_storage_directory 
+\f3\b (Currently labeled as \'93model saves\'94)
+\f0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 Contains a separate save of the model and final parameters (used to visualize without having to run the whole program/train the whole model again).\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 model_output_directory 
+\f3\b (Currently \'93output\'94)
+\f0\b0 \
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This is where output files like graphs are stored.\
+\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\i0 \cf0 selected_dataset
+\f1\i \
+This is a text file that determines which dataset that you will be using. It\'92s auto-generated by the program, but you can edit it manually. You may also delete the file, which will prompt the user to define a new dataset\
+\
+
+\f0\i0 raw_data_directory\
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f1\i \cf0 This is where the raw data (in csv format) is stored.
+\f0\i0 \
+\
+}

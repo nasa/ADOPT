@@ -1,0 +1,52 @@
+{	
+	"config_name":"run",
+	"config_id":0,
+	"id_hold":false,
+	
+	"training":
+	{ 
+		"batch_size": 32,
+		"dr": 0,
+		"epochs": 200,
+		"lam": 0.01,
+		"lr": 0.001,
+		"nhd": 500,
+		"nhr": 5,
+		"seed": 0,
+		"pre_trained_model":"",
+		"train_flag": 1,
+		"pre_trained_json":""
+	},
+   
+    "importing": 
+    {
+        "nominal_filename":"filelist_nominal.txt",
+        "adverse_filename": "filelist_adverse.txt",
+		"holdout_percent": 0.1,
+		"validation_percent":0.4,
+		"state_cache": 0,
+		"time_splice": 1
+    },
+    
+    "preprocessing":
+    {
+        "set_sample_length":null,
+		"redundant_parameters": [],
+		"drop_parameters":[],
+		"all_parameter_names":[]
+    }, 
+    
+    "model_io":
+    {
+        "model_filename":"keras_model.h5",
+        "model_container_filename":"model_container.pkl",
+        "data_container_filename":"data.pkl"
+    },  
+    
+    "visualization":
+    {
+		"binary_parameters":[],
+		"guideline_type": 1,	
+		"precursor_threshold":0.5
+    }
+}

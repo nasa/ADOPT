@@ -1,0 +1,10 @@
+{
+    "cache_file": "data/cached_data.h5",
+    "datasets_directory": "../../../datasets/",
+    "parameters_directory": "data/parameters/",
+    "model_archive_directory": "misc/model_archive/",
+    "model_storage_directory": "model_saves/",
+    "raw_data_directory": "data/raw_data/",
+    "selected_dataset":"selected_dataset.txt",
+    "model_output_directory":"output/"
+}
