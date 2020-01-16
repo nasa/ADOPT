@@ -52,7 +52,7 @@ NASA Corporate Contributor License Agreement
 
 NASA Point of contact: Nikunj Oza <nikunj.c.oza@nasa.gov>, Data Science Group Lead.
 
-For questions regarding [the research and development of the algorithm], please contact Bryan Matthews <bryan.l.matthews@nasa.gov>, Senior Research Engineer.
+For questions regarding the research and development of the algorithm, please contact Bryan Matthews <bryan.l.matthews@nasa.gov>, Senior Research Engineer.
 
 For questions regarding the source code, please contact Daniel Weckler <daniel.i.weckler@nasa.gov>, Software Engineer.
 
