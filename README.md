@@ -35,12 +35,14 @@ Documents describing how to configure and run the program, as well as how to int
 A directory containing a sample dataset. Other datasets may also be added here by the user.
 
 * [requirements.txt](requirements.txt)   
-General module requirements for the program. A more specific requiremnts.txt can be found in [source](source)
-* [ADOPT NASA Open Source Agreement](ADOPT NASA Open Source Agreement.pdf)  
+General module requirements for the program. A more specific requiremnts.txt can be found in [source](source).
+
+
+* [ADOPT NASA Open Source Agreement.pdf](ADOPT%20NASA%20Open%20Source%20Agreement.pdf)  
 Licensing for ADOPT
-* [ADOPT Individual CLA.pdf](ADOPT Individual CLA.pdf)  
+* [ADOPT Individual CLA.pdf](ADOPT%20Individual%20CLA.pdf)  
 NASA Individual Contributor License Agreement
-* [ADOPT Corporate CLA.pdf](ADOPT Corporate CLA.pdf)   
+* [ADOPT Corporate CLA.pdf](ADOPT%20Corporate%20CLA.pdf)   
 NASA Corporate Contributor License Agreement
 
 
